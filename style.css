@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+}
+.header .logo {
+    color: #D5B45B;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: calc(2rem + 2vmin);
+    font-weight: bold;
+}
+.header a {
+    text-decoration: none;
+    outline: none;
+    transition: all .3s ease-in-out;
+}
+.header ul {
+    min-width: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header ul li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header ul li a {
+    color: #404040;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    font-size: calc(1rem + 1vmin);
+}
+.header ul li a:hover {
+    color: #D5B45B;
+}
+/*Стили для бургера*/
+.header label {
+    display: none;
+}
+.header > .checkbox {
+    display: none;
+}
+#checkbox:checked ~ ul {
+    display: flex;
+}
+.button {
+    font-size: calc(1rem + 1vmin);
+    color: #D5B45B;
+    display: none;
+}
+@media (max-width: 760px) {
+    .header ul {
+        display: none;
+        position: absolute;
+        top: 8vw;
+        left: 0vw;
+        height: auto;
+        width: 100vw;
+        background-color: rgba(88,82,82,0.8);
+        flex-direction: column;
+    }
+    .header ul li {
+        width: 100%;
+    }
+    .header label {
+        display: block;
+    }
+    .button {
+        display: block;
+    }
+}
+/*Стили контента:*/
+h1 {
+    text-align: center;
+    color: red;
+    text-shadow: 3px 3px 5px black;
+    font-size: calc(2rem + 2vmin);
+    margin: 0;
+}
+img {
+    width: 15vw;
+    height: 10vw;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    margin: 0 1vw;
+}
+p {
+    font-size: calc(1.5 rem + 2vmin);
+    text-align: justify;
+}
+.anker {
+    font-size: 20px;
+    font-style: italic;
+}
+.button-top {
+    float: right;
+    margin-right: 3vw;
+}
